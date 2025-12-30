@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  debate-app:
+    build: .
+    env_file: .env
+    ports:
+      - "8000:8000"
+    # This matches your current setup
+    entrypoint: ["python", "-m", "uvicorn", "app.server:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    
+    # --- THIS SECTION IS CRITICAL ---
+    volumes:
+      # Map the ENTIRE current directory (.) to /app inside Docker
+      - .:/app
+      # This ensures that when the script saves "debate_dag.png", it saves it RIGHT HERE on Windows.

@@ -1,0 +1,32 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.venv
+env/
+venv.bak/
+
+# --- React / Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.DS_Store
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# --- Docker ---
+.docker/
+
+# --- Project Specific ---
+logs/
+outputs/
+*.log
+debate_dag.png
+debate_full_report.pdf
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db

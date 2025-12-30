@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0b0c15; /* Deep stage darkness */
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Academic/Prestige Font for Headers */
+  h1, h2, h3, .serif-font {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .stage-light {
+    background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  }
+  
+  .glass-card {
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #FFD700 0%, #FDB931 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c15;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
